@@ -1,0 +1,128 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Consolas', monospace;
+  background: transparent;
+  color: #fff;
+  height: 100%;
+}
+
+.crazy-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 0; left: 0;
+  background: linear-gradient(115deg, #21D4FD 0%, #B721FF 100%);
+  animation: bgmove 10s linear infinite alternate;
+  filter: blur(8px) brightness(0.8);
+}
+@keyframes bgmove {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+header {
+  z-index: 2;
+  position: relative;
+  padding: 2rem 1rem 0.5rem 1rem;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  font-weight: 900;
+  text-shadow: 0 2px 16px #0009, 0 2px 4px #B721FF99;
+}
+.crazy {
+  color: #FFD600;
+  filter: drop-shadow(0 0 6px #FF00A0);
+  animation: crazytext 1.5s infinite alternate cubic-bezier(0.7,0,0.3,1);
+}
+@keyframes crazytext {
+  0%   { letter-spacing: 0.05em; transform: rotate(-2deg) scale(1.0);}
+  100% { letter-spacing: 0.20em; transform: rotate(3deg) scale(1.06);}
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #21D4FD;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-left: 0.5em;
+}
+
+nav {
+  margin: 1.5em 0 0.5em 0;
+}
+nav a {
+  color: #FFD600;
+  background: #0f1020cc;
+  margin: 0 0.7em;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.45em 1em;
+  border-radius: 1em;
+  transition: color 0.3s, background 0.3s, box-shadow 0.2s;
+  box-shadow: 0 0 8px #B721FF44 inset;
+}
+nav a:hover {
+  color: #0ff;
+  background: #B721FFcc;
+  box-shadow: 0 0 12px #FFD60099;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem 4rem 1rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.section {
+  margin: 2em 0;
+}
+.card {
+  background: rgba(20, 20, 30, 0.85);
+  border-radius: 1.1em;
+  box-shadow: 0 6px 28px #0006, 0 2px 8px #B721FF44;
+  padding: 2em 1.6em 1.2em 1.6em;
+  border: 2px solid #21D4FD44;
+  margin-bottom: 2em;
+  transition: box-shadow 0.3s;
+}
+.card:hover {
+  box-shadow: 0 10px 40px #FFD60077, 0 2px 8px #21D4FD77;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #FFD600;
+  margin-bottom: 0.7em;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 6px #B721FF99;
+}
+ul {
+  margin: 0.5em 0 0 1.2em;
+  padding: 0;
+  list-style-type: disc;
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 1em;
+  color: #FFD600;
+  margin: 2em 0 1em 0;
+  text-shadow: 0 1px 6px #000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.5em; }
+  main { padding: 0 0.2em 3em 0.2em; }
+  .card { padding: 1em 0.5em 0.5em 0.5em; }
+  nav a { margin: 0 0.2em; padding: 0.35em 0.7em; }
+}
