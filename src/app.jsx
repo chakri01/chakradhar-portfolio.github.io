@@ -1,6 +1,6 @@
 import { useState, useEffect,React } from "react";
 import { SunIcon, MoonIcon, DownloadIcon } from "./icons";
-import profilePlaceholder from "./profile-placeholder.png";
+// removed: import profilePlaceholder from "./profile-placeholder.png";
 import resumePDF from "./Chakradhar_Kacham_Resume.pdf";
 
 const navLinks = [
